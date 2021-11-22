@@ -8,6 +8,7 @@ public class CyberWebVacanciesPageTest {
 
     @BeforeEach
     private void init() {
+        
         open("https://www.cybcube.com/careers/vacancies/");
 
         if ($("#hs-eu-confirmation-button").exists())
@@ -17,7 +18,6 @@ public class CyberWebVacanciesPageTest {
     @Test
     public void filterTest() {
 
-
         $("#filter-location").selectOptionByValue("Chicago, IL");
         $("#filter-team").selectOptionByValue("Analytics");
 
@@ -26,7 +26,6 @@ public class CyberWebVacanciesPageTest {
 
     @Test
     public void filterTestWithNoSearchResults() {
-
 
         $("#filter-location").selectOptionByValue("Remote");
         $("#filter-team").selectOptionByValue("Industry Engagement");
